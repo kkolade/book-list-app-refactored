@@ -1,3 +1,11 @@
+import {views} from './modules/view.js'
+
+// VARIABLES
+
+// Select element from the dom
+const bookShelf = document.querySelector('.book-shelf');
+const addBookForm = document.querySelector('.add-book-form');
+
 // EVENT LISTENERS
 
 document.addEventListener('DOMContentLoaded', Views.displayBooks);

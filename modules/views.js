@@ -1,4 +1,4 @@
-class Views {
+export class Views {
   static displayBooks() {
     const bookCase = BookPersistence.getLSContent();
     bookCase.forEach((book) => Views.addBook(book));
