@@ -40,7 +40,7 @@ img {
 /* Container */
 .container {
   width: 90%;
-  margin: 0 auto;
+  margin: 1rem auto;
   border: 2px solid #444;
 }
 

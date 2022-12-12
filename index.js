@@ -1,10 +1,9 @@
-import {views} from './modules/view.js'
-
-// VARIABLES
-
-// Select element from the dom
-const bookShelf = document.querySelector('.book-shelf');
-const addBookForm = document.querySelector('.add-book-form');
+import { Book, addBookForm, bookShelf } from './modules/book.js';
+// import {
+//   displayBooks, addBook, clearInputField, removeBookDOM
+// } from './modules/views.js';
+import Views from './modules/views.js';
+import Persistence from './modules/persistence.js';
 
 // EVENT LISTENERS
 
@@ -19,19 +18,22 @@ addBookForm.addEventListener('submit', (e) => {
   const book = new Book(title, author, bookId);
   Views.addBook(book);
   Views.clearInputField();
-  BookPersistence.addBookToLS(book);
+  Persistence.addBookToLS(book);
 });
 
 bookShelf.addEventListener('click', (e) => {
   Views.removeBookDOM(e.target);
   const idItemToRemove = Number(e.target.previousSibling.innerText);
-  BookPersistence.removeBookLS(idItemToRemove);
+  Persistence.removeBookLS(idItemToRemove);
 });
 
 // SINGLE PAGE APP
 const listLink = document.querySelector('#list-link');
 const addNewLink = document.querySelector('#add-new-link');
 const contactLink = document.querySelector('#contact-link');
+console.log(listLink);
+console.log(addNewLink);
+console.log(contactLink);
 
 listLink.addEventListener('click', () => {
   document.querySelector('#list').classList.remove('hide');

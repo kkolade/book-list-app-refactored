@@ -1,6 +1,13 @@
-export class Views {
+// import { getLSContent } from './persistence.js';
+import Persistence from './persistence.js';
+import { bookShelf } from './book.js';
+
+class Views {
+// let book = new Book(_title, author, _bookId)
+
   static displayBooks() {
-    const bookCase = BookPersistence.getLSContent();
+    const bookCase = Persistence.getLSContent();
+    console.log(bookCase);
     bookCase.forEach((book) => Views.addBook(book));
   }
 
@@ -44,3 +51,5 @@ export class Views {
     }
   }
 }
+
+export default Views;

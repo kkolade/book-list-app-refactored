@@ -10,13 +10,13 @@ class Persistence {
   }
 
   static addBookToLS(element) {
-    const AwesomeBookDB = BookPersistence.getLSContent();
+    const AwesomeBookDB = Persistence.getLSContent();
     AwesomeBookDB.push(element);
     localStorage.setItem('books', JSON.stringify(AwesomeBookDB));
   }
 
   static removeBookLS(id) {
-    const newLSContent = BookPersistence.getLSContent();
+    const newLSContent = Persistence.getLSContent();
     newLSContent.forEach((book, i, Arr) => {
       if (book.bookId === id) {
         Arr.splice(i, 1);
@@ -25,3 +25,5 @@ class Persistence {
     localStorage.setItem('books', JSON.stringify(newLSContent));
   }
 }
+
+export default Persistence;
