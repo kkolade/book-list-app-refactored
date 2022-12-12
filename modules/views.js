@@ -2,7 +2,7 @@
 import Persistence from './persistence.js';
 import { bookShelf } from './book.js';
 
-class Views {
+const Views = class {
 // let book = new Book(_title, author, _bookId)
 
   static displayBooks() {
@@ -49,6 +49,6 @@ class Views {
       item.parentElement.remove();
     }
   }
-}
+};
 
 export default Views;

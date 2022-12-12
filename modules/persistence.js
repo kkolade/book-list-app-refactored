@@ -1,4 +1,4 @@
-class Persistence {
+const Persistence = class {
   static getLSContent() {
     let LSContent;
     if (localStorage.getItem('books') === null) {
@@ -24,6 +24,6 @@ class Persistence {
     });
     localStorage.setItem('books', JSON.stringify(newLSContent));
   }
-}
+};
 
 export default Persistence;
