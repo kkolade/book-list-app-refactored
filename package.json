@@ -1,0 +1,24 @@
+{
+  "name": "book-list-app-refactored",
+  "version": "1.0.0",
+  "description": "Microverse Project: A Book list app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkolade/book-list-app-refactored.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Kola Kolade",
+    "email": "kolakolade@gmail.com",
+    "url": "https://github.com/kkolade"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkolade/book-list-app-refactored/issues"
+  },
+  "homepage": "https://github.com/kkolade/book-list-app-refactored#readme"
+}
