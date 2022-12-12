@@ -31,9 +31,6 @@ bookShelf.addEventListener('click', (e) => {
 const listLink = document.querySelector('#list-link');
 const addNewLink = document.querySelector('#add-new-link');
 const contactLink = document.querySelector('#contact-link');
-console.log(listLink);
-console.log(addNewLink);
-console.log(contactLink);
 
 listLink.addEventListener('click', () => {
   document.querySelector('#list').classList.remove('hide');

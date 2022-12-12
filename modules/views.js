@@ -7,7 +7,6 @@ class Views {
 
   static displayBooks() {
     const bookCase = Persistence.getLSContent();
-    console.log(bookCase);
     bookCase.forEach((book) => Views.addBook(book));
   }
 
