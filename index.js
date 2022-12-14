@@ -1,7 +1,5 @@
+import { DateTime } from './modules/luxon.js';
 import { Book, addBookForm, bookShelf } from './modules/book.js';
-// import {
-//   displayBooks, addBook, clearInputField, removeBookDOM
-// } from './modules/views.js';
 import Views from './modules/views.js';
 import Persistence from './modules/persistence.js';
 
@@ -49,3 +47,11 @@ contactLink.addEventListener('click', () => {
   document.querySelector('#add-book').classList.add('hide');
   document.querySelector('#contact').classList.remove('hide');
 });
+
+// DATE
+const clock = () => {
+  const date = document.getElementById('date');
+  const dateLuxon = DateTime.now().toFormat('LLL dd yyyy, t');
+  date.textContent = dateLuxon;
+};
+setInterval(clock, 1000);

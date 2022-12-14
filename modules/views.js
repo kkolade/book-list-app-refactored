@@ -1,10 +1,7 @@
-// import { getLSContent } from './persistence.js';
 import Persistence from './persistence.js';
 import { bookShelf } from './book.js';
 
 const Views = class {
-// let book = new Book(_title, author, _bookId)
-
   static displayBooks() {
     const bookCase = Persistence.getLSContent();
     bookCase.forEach((book) => Views.addBook(book));
